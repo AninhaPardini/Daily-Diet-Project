@@ -4,16 +4,17 @@ Este é um projeto baseado no desafio da Rocketseat de API NodeJs em Restful, on
 
 ## Requisitos da aplicação
 
-- Requisitos Funcionais<br>
-  [] Deve ser possível criar um usuário<br>
-  [] Deve ser possível identificar o usuário entre as requisições<br>
-  [] Deve ser possível registrar uma refeição feita, com as seguintes informações:<br>
-  As refeições devem ser relacionadas a um usuário.<br>
+### Requisitos Funcionais
 
-  - Nome<br>
-  - Descrição<br>
-  - Data e Hora<br>
-  - Está dentro ou não da dieta<br><br>
+[] Deve ser possível criar um usuário<br>
+[] Deve ser possível identificar o usuário entre as requisições<br>
+[] Deve ser possível registrar uma refeição feita, com as seguintes informações:<br>
+As refeições devem ser relacionadas a um usuário.<br>
+
+- Nome<br>
+- Descrição<br>
+- Data e Hora<br>
+- Está dentro ou não da dieta<br><br>
 
 [] Deve ser possível editar uma refeição, podendo alterar todos os dados acima<br>
 [] Deve ser possível apagar uma refeição<br>
@@ -26,10 +27,11 @@ Este é um projeto baseado no desafio da Rocketseat de API NodeJs em Restful, on
 [] Melhor sequência de refeições dentro da dieta<br>
 [] O usuário só pode visualizar, editar e apagar as refeições o qual ele criou<br>
 
-- Regras de Negócio<br>
-  [] O usuário deve informar email e senha para criação<br>
-  []<br>
-  []<br>
-  []<br>
-  []<br>
-  []<br>
+## Regras de Negócio<br>
+
+[] O usuário deve informar email e senha para criação<br>
+[]<br>
+[]<br>
+[]<br>
+[]<br>
+[]<br>
