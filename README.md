@@ -27,7 +27,7 @@ As refeições devem ser relacionadas a um usuário.<br>
 [] Melhor sequência de refeições dentro da dieta<br>
 [] O usuário só pode visualizar, editar e apagar as refeições o qual ele criou<br>
 
-## Regras de Negócio<br>
+### Regras de Negócio<br>
 
 [] O usuário deve informar email e senha para criação<br>
 []<br>
