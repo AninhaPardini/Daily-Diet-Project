@@ -4,6 +4,7 @@ export async function up(knex: Knex): Promise<void> {
   await knex.schema.createTable('feeds', (table) => {
     table.string('name').notNullable()
     table.string('description')
+    table.timestamp
   })
 }
 

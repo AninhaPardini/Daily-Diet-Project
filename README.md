@@ -7,7 +7,7 @@ Este é um projeto baseado no desafio da Rocketseat de API NodeJs em Restful, on
 ### Requisitos Funcionais
 
 [x] Deve ser possível criar um usuário<br>
-[] Deve ser possível identificar o usuário entre as requisições<br>
+[x] Deve ser possível identificar o usuário entre as requisições<br>
 [] Deve ser possível registrar uma refeição feita, com as seguintes informações:<br>
 As refeições devem ser relacionadas a um usuário.<br>
 
