@@ -3,6 +3,7 @@ import fastify from 'fastify'
 import cookie from '@fastify/cookie'
 import { userRegister } from './routes/users/registerUser'
 import { userListAll } from './routes/users/listAllUsers'
+import { searchUser } from './routes/users/SearchUser'
 
 export const app = fastify()
 
@@ -29,5 +30,9 @@ app.register(userRegister, {
 })
 
 app.register(userListAll, {
+  prefix: 'users',
+})
+
+app.register(searchUser, {
   prefix: 'users',
 })

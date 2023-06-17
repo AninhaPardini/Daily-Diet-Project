@@ -18,10 +18,12 @@ export async function userRegister(app: FastifyInstance) {
         .send({ error: 'Email and password are required' })
     }
 
-    const emailAlreadyExistis = await knex('users').where('email', email)
+    const emailAlreadyExistis = await knex('users')
+      .where('email', email)
+      .first()
     console.log(emailAlreadyExistis)
 
-    if (emailAlreadyExistis === '') {
+    if (emailAlreadyExistis) {
       return reply.status(400).send({
         error: 'Email already exists',
       })
