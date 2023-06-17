@@ -6,7 +6,7 @@ Este é um projeto baseado no desafio da Rocketseat de API NodeJs em Restful, on
 
 ### Requisitos Funcionais
 
-[] Deve ser possível criar um usuário<br>
+[x] Deve ser possível criar um usuário<br>
 [] Deve ser possível identificar o usuário entre as requisições<br>
 [] Deve ser possível registrar uma refeição feita, com as seguintes informações:<br>
 As refeições devem ser relacionadas a um usuário.<br>
@@ -30,8 +30,29 @@ As refeições devem ser relacionadas a um usuário.<br>
 ### Regras de Negócio<br>
 
 [] O usuário deve informar email e senha para criação<br>
+[] O usuário terá um uuid para busca de dados<br>
+[] <br>
 []<br>
 []<br>
 []<br>
-[]<br>
-[]<br>
+
+
+## Passo a passo (desde o ínicio)
+
+Escrevi este passo a passo para fixar meu aprendizado.
+
+### Preparando ambiente
+
+npm i:<br>
+📦 init -y<br>
+⬇️ fastify<br>
+⬇️ -D tsx<br>
+⬇️ -D typescript<br>
+⬇️ eslint @rocketseat/eslint-config -D<br>
+📦 npx tsc --init<br>
+⬇️ npm install knex sqlite3 @types/knex @types/sqlite3<br>
+⬇️ npm i -D zod<br>
+
+Scripts:<br>
+⚙️ "lint": "eslint src --ext .ts --fix"<br>
+⚙️ "dev": "tsx --watch src/server.ts "<br>
