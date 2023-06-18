@@ -3,7 +3,7 @@ import fastify from 'fastify'
 import cookie from '@fastify/cookie'
 import { userRegister } from './routes/users/registerUser'
 import { userListAll } from './routes/users/listAllUsers'
-import { searchUser } from './routes/users/SearchUser'
+import { searchUser } from './routes/users/searchUser'
 
 export const app = fastify()
 
