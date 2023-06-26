@@ -8,27 +8,36 @@ export async function feedRegister(app: FastifyInstance) {
     const createFeedBodySchema = z.object({
       name: z.string(),
       description: z.string(),
-      date: z.date(),
+      date: z.string(),
       is_diet: z.boolean(),
       user_id: z.string(),
     })
 
-    const { name, description, date, is_diet } = createFeedBodySchema.parse(
-      request.body,
-    )
+    const { name, description, is_diet, user_id, date } =
+      createFeedBodySchema.parse(request.body)
 
-    if (!name || !date || !is_diet) {
+    // Converter a string 'date' para um objeto Date
+    const parsedDate = new Date(date)
+
+    if (!name || !parsedDate || !is_diet || !user_id) {
       return reply
         .status(400)
-        .send({ error: 'name, date or diet are required' })
+        .send({ error: 'name, date, diet or user_id are required' })
     }
 
     try {
       await knex('feeds')
-        .insert({ id: randomUUID(), name, description, date, is_diet, user_id })
+        .insert({
+          id: randomUUID(),
+          name,
+          description,
+          date: parsedDate,
+          is_diet,
+          user_id,
+        })
         .returning('*')
 
-      return reply.status(201).send({ message: 'User created!' })
+      return reply.status(201).send({ message: 'Feed registred!' })
     } catch (error) {
       return reply.status(500).send({
         error: 'Something went wrong',

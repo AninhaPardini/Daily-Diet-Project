@@ -8,7 +8,7 @@ Este é um projeto baseado no desafio da Rocketseat de API NodeJs em Restful, on
 
 [x] Deve ser possível criar um usuário<br>
 [x] Deve ser possível identificar o usuário entre as requisições<br>
-[] Deve ser possível registrar uma refeição feita, com as seguintes informações:<br>
+[x] Deve ser possível registrar uma refeição feita, com as seguintes informações:<br>
 As refeições devem ser relacionadas a um usuário.<br>
 
 - Nome<br>
@@ -16,9 +16,9 @@ As refeições devem ser relacionadas a um usuário.<br>
 - Data e Hora<br>
 - Está dentro ou não da dieta<br><br>
 
-[] Deve ser possível editar uma refeição, podendo alterar todos os dados acima<br>
-[] Deve ser possível apagar uma refeição<br>
-[] Deve ser possível listar todas as refeições de um usuário<br>
+[x] Deve ser possível editar uma refeição, podendo alterar todos os dados acima<br>
+[x] Deve ser possível apagar uma refeição<br>
+[] Deve ser possírvel listar todas as refeições de um usuário<br>
 [] Deve ser possível visualizar uma única refeição<br>
 [] Deve ser possível recuperar as métricas de um usuário<br>
 [] Quantidade total de refeições registradas<br>
@@ -56,3 +56,13 @@ npm i:<br>
 Scripts:<br>
 ⚙️ "lint": "eslint src --ext .ts --fix"<br>
 ⚙️ "dev": "tsx --watch src/server.ts "<br>
+
+### Zod anotações
+
+O zod não consegue tratar o date, então tem que fazer isso manualmente em registerFeed.
+
+### Forma de atualizar as feeds
+
+Object.entries(updatedFields) converte o objeto updatedFields em uma matriz de pares chave/valor, onde cada par é representado por um array de duas posições: a primeira posição contém a chave e a segunda posição contém o valor correspondente.
+
+filter(([_, value]) => value !== undefined) aplica uma função de filtro na matriz de pares chave/valor. Essa função recebe cada par como argumento e retorna true se o valor (segunda posição do array) não for undefined, indicando que o campo foi definido e deve ser atualizado. Os pares que não atendem a essa condição serão filtrados.
